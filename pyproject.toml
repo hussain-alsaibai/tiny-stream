@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tiny-stream"
+version = "0.1.0"
+description = "Streaming response parser for LLM APIs (SSE, JSON-lines, chunked transfer)."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+    { name = "Hussain Al-Saibai", email = "hussain.alsaibai@gmail.com" },
+]
+keywords = [
+    "llm",
+    "streaming",
+    "sse",
+    "server-sent-events",
+    "openai",
+    "anthropic",
+    "jsonl",
+    "ndjson",
+    "parser",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
+requires-python = ">=3.8"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-asyncio>=0.21",
+]
+
+[project.urls]
+Homepage = "https://github.com/hussain-alsaibai/tiny-stream"
+Repository = "https://github.com/hussain-alsaibai/tiny-stream"
+Issues = "https://github.com/hussain-alsaibai/tiny-stream/issues"
+
+[tool.setuptools]
+py-modules = ["tiny_stream"]
+
+[tool.pytest.ini_options]
+testpaths = ["test_tiny_stream.py"]
+python_files = ["test_*.py"]
+addopts = "-ra"
